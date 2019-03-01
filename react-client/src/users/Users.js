@@ -1,20 +1,16 @@
 import React from "react";
 import axios from "axios";
 
+import requiresAuth from "../auth/requiresAuth";
+
 class Users extends React.Component {
   state = {
     users: []
   };
 
   componentDidMount() {
-    const endpoint = "http://localhost:4000/api/users";
-    const token = localStorage.getItem("jwt");
-    const reqOptions = {
-      headers: { authorization: token }
-    };
-
     axios
-      .get(endpoint, reqOptions)
+      .get("/users")
       .then(res => {
         this.setState({ users: res.data.users });
       })
@@ -37,4 +33,4 @@ class Users extends React.Component {
   }
 }
 
-export default Users;
+export default requiresAuth(Users);

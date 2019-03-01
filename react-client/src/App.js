@@ -7,7 +7,7 @@ import Users from "./users/Users";
 import "./App.css";
 
 class App extends Component {
-  Logout = () => {
+  logout = () => {
     localStorage.removeItem("jwt");
 
     this.props.history.push("/login");
