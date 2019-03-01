@@ -3,6 +3,8 @@ import axios from "axios";
 
 import requiresAuth from "../auth/requiresAuth";
 
+import "./Users.css";
+
 class Users extends React.Component {
   state = {
     users: []
@@ -21,11 +23,12 @@ class Users extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>List of Users</h1>
-        <ul>
+      <div className="usersContainer">
+        <ul className="userSection">
           {this.state.users.map(user => (
-            <li key={user.id}>{user.username}</li>
+            <li className="userCard" key={user.id}>
+              {user.username}
+            </li>
           ))}
         </ul>
       </div>

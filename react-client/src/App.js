@@ -18,7 +18,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <nav>
+          <nav className="appNav">
             <NavLink to="/register">Register</NavLink>
             &nbsp;|&nbsp;
             <NavLink to="/login">Login</NavLink>
