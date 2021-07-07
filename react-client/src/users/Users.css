@@ -1,0 +1,24 @@
+.usersContainer {
+  margin: 0 auto;
+  height: 100vh;
+  background-color: aqua;
+}
+
+.userSection {
+  max-width: 120rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.userCard {
+  width: 46%;
+  margin: 60px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  border: solid 1px black;
+  color: rgb(105, 17, 46);
+  font-size: 4rem;
+  border-radius: 30px;
+}
